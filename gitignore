@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.png
+*.pt
+.DS_Store
+
+# checkpoints -- keep only the 3 final ones tracked explicitly if desired
+# (sysid.pth, policy_balance.pth, policy_swingup.pth); everything else
+# (intermediate curriculum stages, old capacity/weight sweep experiments)
+# should not be committed.
+*_stage*.pth
