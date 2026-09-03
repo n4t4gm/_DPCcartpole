@@ -134,10 +134,8 @@ if __name__ == "__main__":
     patience = 40
     Qdx = 0.01
     hsizes = [32, 32]
-    integration = "rk4"  # euler->rk4, NODE 논문(Neural ODEs for nonlinear sysID)이
-    # double pendulum(불안정계) 같은 시스템에서 고차 적분기로 정확도가 크게 개선되는
-    # 걸 보고함 -- 카트폴도 원점이 불안정 평형점이라 비슷한 효과 기대, 기존 RK4
-    # 클래스(CartPoleNSSMTransitionRK4) 재사용
+    integration = "euler"  # RK4도 시도해봤음 (theta RMSE 12.37->11.31deg, 소폭 개선) --
+    # NODE(Neural ODE) 방향은 시간 관계상 이후 과제로 보류, 기본값은 euler로 유지
     signal_type = "prbs"
 
     print("1. 데이터셋 생성 중 (fully observable -- 진짜 x0 그대로 사용)...")
